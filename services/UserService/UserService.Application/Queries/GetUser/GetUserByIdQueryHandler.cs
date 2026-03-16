@@ -1,34 +1,39 @@
+using Dapper;
 using MediatR;
 using SharedKernel.Common;
 using UserService.Application.DTOs;
 using UserService.Application.Interfaces;
-using UserService.Domain.Entities;
 
 namespace UserService.Application.Queries.GetUser;
 
 public sealed class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, Result<UserDto>>
 {
-    private readonly IUserRepository _userRepository;
+    private readonly ISqlConnectionFactory _sqlConnectionFactory;
 
-    public GetUserByIdQueryHandler(IUserRepository userRepository) => _userRepository = userRepository;
+    public GetUserByIdQueryHandler(ISqlConnectionFactory sqlConnectionFactory) => _sqlConnectionFactory = sqlConnectionFactory;
 
     public async Task<Result<UserDto>> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
     {
-        var user = await _userRepository.GetByIdAsync(request.UserId, cancellationToken);
+        using var connection = _sqlConnectionFactory.CreateConnection();
+        const string sql = @"
+            SELECT 
+                ""Id"", 
+                ""FirstName"", 
+                ""LastName"", 
+                ""FirstName"" || ' ' || ""LastName"" AS ""FullName"", 
+                ""Email"", 
+                CAST(""Role"" AS integer) AS ""Role"", 
+                ""IsActive"", 
+                ""CreatedAt"", 
+                ""UpdatedAt""
+            FROM ""Users""
+            WHERE ""Id"" = @Id
+        ";
+
+        var user = await connection.QueryFirstOrDefaultAsync<UserDto>(sql, new { Id = request.UserId });
 
         return user is null
             ? Result<UserDto>.Failure($"User with ID '{request.UserId}' was not found.")
-            : Result<UserDto>.Success(MapToDto(user));
+            : Result<UserDto>.Success(user);
     }
-
-    private static UserDto MapToDto(User user) => new(
-        user.Id,
-        user.FirstName,
-        user.LastName,
-        user.FullName,
-        user.Email.Value,
-        user.Role,
-        user.IsActive,
-        user.CreatedAt,
-        user.UpdatedAt);
 }

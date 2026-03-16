@@ -25,6 +25,7 @@ public static class DependencyInjection
                     sql.EnableRetryOnFailure(maxRetryCount: 5)));
         }
 
+        services.AddScoped<ISqlConnectionFactory>(_ => new SqlConnectionFactory(connectionString ?? ""));
         services.AddScoped<IUserRepository, UserRepository>();
         return services;
     }
