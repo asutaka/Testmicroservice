@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option csharp_namespace = "OrderService.Contracts.Grpc";
+
+package order;
+
+service OrderGrpc {
+  rpc GetOrderById (GetOrderByIdRequest) returns (GetOrderByIdResponse);
+  rpc GetOrdersByUser (GetOrdersByUserRequest) returns (GetOrdersByUserResponse);
+}
+
+message GetOrderByIdRequest {
+  string order_id = 1;
+}
+
+message GetOrderByIdResponse {
+  bool found = 1;
+  OrderMessage order = 2;
+}
+
+message GetOrdersByUserRequest {
+  string user_id = 1;
+}
+
+message GetOrdersByUserResponse {
+  repeated OrderMessage orders = 1;
+}
+
+message OrderMessage {
+  string id = 1;
+  string user_id = 2;
+  string status = 3;
+  double total_amount = 4;
+  string currency = 5;
+}

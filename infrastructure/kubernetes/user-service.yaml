@@ -1,0 +1,75 @@
+---
+# UserService Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+  namespace: microservices
+  labels:
+    app: user-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+        - name: user-service
+          image: user-service:latest
+          ports:
+            - containerPort: 5001  # REST
+            - containerPort: 5101  # gRPC
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Production
+            - name: RabbitMQ__Host
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-config
+                  key: rabbitmq-host
+            - name: ConnectionStrings__UserDb
+              valueFrom:
+                secretKeyRef:
+                  name: db-secrets
+                  key: user-db-connection
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5001
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5001
+            initialDelaySeconds: 30
+            periodSeconds: 30
+---
+# UserService Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service
+  namespace: microservices
+spec:
+  selector:
+    app: user-service
+  ports:
+    - name: http
+      port: 5001
+      targetPort: 5001
+    - name: grpc
+      port: 5101
+      targetPort: 5101
+  type: ClusterIP

@@ -1,0 +1,17 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+COPY building-blocks/SharedKernel/ building-blocks/SharedKernel/
+COPY building-blocks/EventBus/ building-blocks/EventBus/
+COPY building-blocks/Observability/ building-blocks/Observability/
+COPY services/UserService/ services/UserService/
+
+RUN dotnet restore services/UserService/UserService.API/UserService.API.csproj
+RUN dotnet publish services/UserService/UserService.API/UserService.API.csproj \
+    -c Release -o /app/out --no-restore
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+COPY --from=build /app/out .
+EXPOSE 5001 5101
+ENTRYPOINT ["dotnet", "UserService.API.dll"]

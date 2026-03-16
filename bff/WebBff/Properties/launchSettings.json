@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "WebBff": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:51807;http://localhost:51809"
+    }
+  }
+}

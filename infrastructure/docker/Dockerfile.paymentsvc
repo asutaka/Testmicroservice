@@ -1,0 +1,17 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+COPY building-blocks/EventBus/ building-blocks/EventBus/
+COPY building-blocks/Observability/ building-blocks/Observability/
+COPY services/OrderService/OrderService.Contracts/ services/OrderService/OrderService.Contracts/
+COPY services/PaymentService/ services/PaymentService/
+
+RUN dotnet restore services/PaymentService/PaymentService.API/PaymentService.API.csproj
+RUN dotnet publish services/PaymentService/PaymentService.API/PaymentService.API.csproj \
+    -c Release -o /app/out --no-restore
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+COPY --from=build /app/out .
+EXPOSE 5003
+ENTRYPOINT ["dotnet", "PaymentService.API.dll"]

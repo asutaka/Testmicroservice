@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+option csharp_namespace = "UserService.Contracts.Grpc";
+
+package user;
+
+// --------------------------------------------------------
+// UserService gRPC contract
+// --------------------------------------------------------
+
+service UserGrpc {
+  rpc GetUserById (GetUserByIdRequest) returns (GetUserByIdResponse);
+  rpc GetUserByEmail (GetUserByEmailRequest) returns (GetUserByIdResponse);
+  rpc UserExists (UserExistsRequest) returns (UserExistsResponse);
+}
+
+message GetUserByIdRequest {
+  string user_id = 1;
+}
+
+message GetUserByEmailRequest {
+  string email = 1;
+}
+
+message GetUserByIdResponse {
+  bool found = 1;
+  UserMessage user = 2;
+}
+
+message UserExistsRequest {
+  string user_id = 1;
+}
+
+message UserExistsResponse {
+  bool exists = 1;
+}
+
+message UserMessage {
+  string id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string full_name = 4;
+  string email = 5;
+  string role = 6;
+  bool is_active = 7;
+}

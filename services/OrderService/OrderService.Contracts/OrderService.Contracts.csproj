@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>OrderService.Contracts</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\building-blocks\EventBus\EventBus.csproj" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.67.0" PrivateAssets="All" />
+    <PackageReference Include="Google.Protobuf" Version="3.29.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\order.proto" GrpcServices="Server;Client" />
+  </ItemGroup>
+</Project>

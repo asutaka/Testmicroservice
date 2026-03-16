@@ -1,0 +1,12 @@
+<Project>
+  <!--
+    Global MSBuild properties applied to ALL projects in the solution.
+  -->
+  <PropertyGroup>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <NoWarn>$(NoWarn);NU1605;CS1705</NoWarn>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+</Project>
