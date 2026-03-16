@@ -56,14 +56,4 @@ metadata:
   namespace: microservices
 data:
   rabbitmq-host: "rabbitmq.microservices.svc.cluster.local"
----
-# Secret for DB connections
-apiVersion: v1
-kind: Secret
-metadata:
-  name: db-secrets
-  namespace: microservices
-type: Opaque
-stringData:
-  user-db-connection: "Host=postgres;Port=5432;Database=UserDb;Username=postgres;Password=Str0ngP@ssword!"
-  order-db-connection: "Host=postgres;Port=5432;Database=OrderDb;Username=postgres;Password=Str0ngP@ssword!"
+
