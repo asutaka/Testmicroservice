@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/asutaka/Tesmicroservice.git'  # TODO: Edit this to your GitHub repo URL
+    repoURL: 'https://github.com/asutaka/Testmicroservice.git'  # TODO: Edit this to your GitHub repo URL
     targetRevision: HEAD
     path: infrastructure/kubernetes
   destination:
