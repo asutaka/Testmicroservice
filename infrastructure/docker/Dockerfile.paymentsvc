@@ -3,6 +3,7 @@ WORKDIR /src
 
 COPY building-blocks/EventBus/ building-blocks/EventBus/
 COPY building-blocks/Observability/ building-blocks/Observability/
+COPY building-blocks/SharedKernel/ building-blocks/SharedKernel/
 COPY services/OrderService/OrderService.Contracts/ services/OrderService/OrderService.Contracts/
 COPY services/PaymentService/ services/PaymentService/
 
