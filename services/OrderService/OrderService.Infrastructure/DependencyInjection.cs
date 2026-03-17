@@ -18,6 +18,7 @@ public static class DependencyInjection
             services.AddDbContext<OrderDbContext>(o => o.UseNpgsql(connectionString,
                 sql => sql.EnableRetryOnFailure(maxRetryCount: 5)));
 
+        services.AddScoped<ISqlConnectionFactory>(_ => new SqlConnectionFactory(connectionString ?? ""));
         services.AddScoped<IOrderRepository, OrderRepository>();
         return services;
     }

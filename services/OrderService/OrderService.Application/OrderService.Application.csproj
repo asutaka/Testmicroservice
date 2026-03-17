@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.35" />
     <ProjectReference Include="..\OrderService.Domain\OrderService.Domain.csproj" />
     <ProjectReference Include="..\..\..\building-blocks\SharedKernel\SharedKernel.csproj" />
     <ProjectReference Include="..\..\..\building-blocks\EventBus\EventBus.csproj" />
