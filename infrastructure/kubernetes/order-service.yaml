@@ -16,6 +16,8 @@ spec:
       labels:
         app: order-service
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
         - name: order-service
           image: ghcr.io/asutaka/order-service:latest
