@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: user-service
-          image: user-service:latest
+          image: ghcr.io/asutaka/user-service:latest
           ports:
             - containerPort: 5001  # REST
             - containerPort: 5101  # gRPC
