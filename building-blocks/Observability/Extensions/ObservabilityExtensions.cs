@@ -22,6 +22,11 @@ public static class ObservabilityExtensions
                 tracing
                     .AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation()
+                    .AddEntityFrameworkCoreInstrumentation(options =>
+                    {
+                        options.SetDbStatementForText = true;
+                        options.SetDbStatementForStoredProcedure = true;
+                    })
                     .AddGrpcClientInstrumentation()  // from OpenTelemetry.Instrumentation.GrpcNetClient
                     .AddJaegerExporter(o =>
                     {
