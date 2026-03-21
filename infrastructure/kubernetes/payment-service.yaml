@@ -33,6 +33,7 @@ spec:
             - name: RabbitMQ__Host
               valueFrom:
                 configMapKeyRef:
+                  name: microservices-config
                   key: rabbitmq-host
             - name: JAEGER_HOST
               valueFrom:
