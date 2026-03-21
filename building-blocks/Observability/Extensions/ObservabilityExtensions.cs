@@ -11,9 +11,9 @@ public static class ObservabilityExtensions
     public static IServiceCollection AddObservability(
         this IServiceCollection services,
         string serviceName,
-        string serviceVersion = "1.0.0",
-        string jaegerHost = "localhost")
+        string serviceVersion = "1.0.0")
     {
+        string jaegerHost = Environment.GetEnvironmentVariable("JAEGER_HOST") ?? "localhost";
         services.AddOpenTelemetry()
             .ConfigureResource(resource =>
                 resource.AddService(serviceName, serviceVersion: serviceVersion))

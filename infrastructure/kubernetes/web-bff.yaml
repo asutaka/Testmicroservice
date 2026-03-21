@@ -14,6 +14,9 @@ spec:
       app: web-bff
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "5010"
       labels:
         app: web-bff
     spec:
@@ -31,6 +34,11 @@ spec:
               value: "http://user-service:5001"
             - name: Services__OrderService
               value: "http://order-service:5002"
+            - name: JAEGER_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-config
+                  key: JAEGER_HOST
           resources:
             requests:
               memory: "128Mi"

@@ -13,6 +13,9 @@ spec:
       app: api-gateway
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "5000"
       labels:
         app: api-gateway
     spec:
@@ -58,4 +61,5 @@ metadata:
   namespace: microservices
 data:
   rabbitmq-host: "rabbitmq.microservices.svc.cluster.local"
+  JAEGER_HOST: "jaeger.microservices.svc.cluster.local"
 

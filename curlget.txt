@@ -1,0 +1,25 @@
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0* Host api-gateway.microservices.svc.cluster.local:80 was resolved.
+* IPv6: (none)
+* IPv4: 10.96.51.90
+*   Trying 10.96.51.90:80...
+* Established connection to api-gateway.microservices.svc.cluster.local (10.96.51.90 port 80) from 10.244.0.51 port 44764 
+* using HTTP/1.x
+> GET /api/users HTTP/1.1
+> Host: api-gateway.microservices.svc.cluster.local
+> User-Agent: curl/8.18.0
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Content-Type: application/json; charset=utf-8
+< Date: Sat, 21 Mar 2026 15:42:28 GMT
+< Server: Kestrel
+< Transfer-Encoding: chunked
+< X-Request-Id: 84fc98f1
+< 
+{ [12 bytes data]
+100      2   0      2   0      0     69      0                              0100      2   0      2   0      0     69      0                              0100      2   0      2   0      0     68      0                              0
+* Connection #0 to host api-gateway.microservices.svc.cluster.local:80 left intact
+[]pod "curl-test6" deleted from default namespace

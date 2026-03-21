@@ -13,6 +13,9 @@ spec:
       app: order-service
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "5002"
       labels:
         app: order-service
     spec:
@@ -30,8 +33,12 @@ spec:
             - name: RabbitMQ__Host
               valueFrom:
                 configMapKeyRef:
-                  name: microservices-config
                   key: rabbitmq-host
+            - name: JAEGER_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-config
+                  key: JAEGER_HOST
             - name: GrpcClients__UserService
               value: "http://user-service:5101"
             - name: ConnectionStrings__OrderDb

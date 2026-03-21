@@ -1,0 +1,33 @@
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0* Host api-gateway.microservices.svc.cluster.local:80 was resolved.
+* IPv6: (none)
+* IPv4: 10.96.51.90
+*   Trying 10.96.51.90:80...
+* Established connection to api-gateway.microservices.svc.cluster.local (10.96.51.90 port 80) from 10.244.0.50 port 39744 
+* using HTTP/1.x
+> POST /api/users HTTP/1.1
+> Host: api-gateway.microservices.svc.cluster.local
+> User-Agent: curl/8.18.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 2
+> 
+} [2 bytes data]
+* upload completely sent off: 2 bytes
+< HTTP/1.1 400 Bad Request
+< Content-Type: application/json; charset=utf-8
+< Date: Sat, 21 Mar 2026 15:41:51 GMT
+< Server: Kestrel
+< Transfer-Encoding: chunked
+< X-Request-Id: d8d29824
+< 
+{ [379 bytes data]
+100    369   0    367 100      2  34000    185                              0100    369   0    367 100      2  33645    183                              0100    369   0    367 100      2  32973    179                              0
+* Connection #0 to host api-gateway.microservices.svc.cluster.local:80 left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+* URL rejected: Port number was not a decimal number between 0 and 65535
+* closing connection #-1
+curl: (3) URL rejected: Port number was not a decimal number between 0 and 65535
+{"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"$":["'\\' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 0 | BytePositionInLine: 1."],"request":["The request field is required."]},"traceId":"00-b55f542b000c135ba5fb139029a7bb8c-7cb85ff3ff958f0f-00"}pod "curl-test5" deleted from default namespace
