@@ -1,0 +1,361 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    argocd.argoproj.io/tracking-id: test-microservices:argoproj.io/Application:argocd/test-microservices
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"argoproj.io/v1alpha1","kind":"Application","metadata":{"annotations":{"argocd.argoproj.io/tracking-id":"test-microservices:argoproj.io/Application:argocd/test-microservices"},"name":"test-microservices","namespace":"argocd"},"spec":{"destination":{"namespace":"microservices","server":"https://kubernetes.default.svc"},"project":"default","source":{"path":"infrastructure/kubernetes","repoURL":"https://github.com/asutaka/Testmicroservice.git","targetRevision":"HEAD"},"syncPolicy":{"automated":{"prune":true,"selfHeal":true},"syncOptions":["CreateNamespace=true"]}}}
+  creationTimestamp: "2026-03-18T18:11:49Z"
+  generation: 484
+  name: test-microservices
+  namespace: argocd
+  resourceVersion: "119212"
+  uid: 6f54c8a7-90a2-4588-af8c-d811e709b2b7
+spec:
+  destination:
+    namespace: microservices
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: infrastructure/kubernetes
+    repoURL: https://github.com/asutaka/Testmicroservice.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+status:
+  conditions:
+  - lastTransitionTime: "2026-03-21T02:37:05Z"
+    message: 'Failed to load target state: failed to generate manifest for source
+      1 of 1: rpc error: code = Unavailable desc = connection error: desc = "transport:
+      Error while dialing: dial tcp 10.96.187.88:8081: connect: connection refused"'
+    type: ComparisonError
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2026-03-21T06:40:38Z"
+    status: Degraded
+  history:
+  - deployStartedAt: "2026-03-20T18:12:40Z"
+    deployedAt: "2026-03-20T18:12:41Z"
+    id: 2
+    initiatedBy:
+      username: admin
+    revision: f05cd775a40c13e1de864dc61499ede8ffd85af5
+    source:
+      path: infrastructure/kubernetes
+      repoURL: https://github.com/asutaka/Testmicroservice.git
+      targetRevision: HEAD
+  - deployStartedAt: "2026-03-20T18:17:42Z"
+    deployedAt: "2026-03-20T18:17:43Z"
+    id: 3
+    initiatedBy:
+      automated: true
+    revision: 4cb5d301c461eb7f416734773016be435cafb83a
+    source:
+      path: infrastructure/kubernetes
+      repoURL: https://github.com/asutaka/Testmicroservice.git
+      targetRevision: HEAD
+  - deployStartedAt: "2026-03-20T18:26:51Z"
+    deployedAt: "2026-03-20T18:26:52Z"
+    id: 4
+    initiatedBy:
+      automated: true
+    revision: 7edb5cd75b57e824a074ccf433fa74a7907eb6c5
+    source:
+      path: infrastructure/kubernetes
+      repoURL: https://github.com/asutaka/Testmicroservice.git
+      targetRevision: HEAD
+  - deployStartedAt: "2026-03-20T18:27:32Z"
+    deployedAt: "2026-03-20T18:27:33Z"
+    id: 5
+    initiatedBy:
+      username: admin
+    revision: 7edb5cd75b57e824a074ccf433fa74a7907eb6c5
+    source:
+      path: infrastructure/kubernetes
+      repoURL: https://github.com/asutaka/Testmicroservice.git
+      targetRevision: HEAD
+  - deployStartedAt: "2026-03-20T19:17:35Z"
+    deployedAt: "2026-03-20T19:17:35Z"
+    id: 6
+    initiatedBy:
+      username: admin
+    revision: e1bb1c31badb9ad8821f678883caea79093ce9c8
+    source:
+      path: infrastructure/kubernetes
+      repoURL: https://github.com/asutaka/Testmicroservice.git
+      targetRevision: HEAD
+  - deployStartedAt: "2026-03-20T19:30:34Z"
+    deployedAt: "2026-03-20T19:30:35Z"
+    id: 7
+    initiatedBy:
+      username: admin
+    revision: e1bb1c31badb9ad8821f678883caea79093ce9c8
+    source:
+      path: infrastructure/kubernetes
+      repoURL: https://github.com/asutaka/Testmicroservice.git
+      targetRevision: HEAD
+  - deployStartedAt: "2026-03-20T19:35:19Z"
+    deployedAt: "2026-03-20T19:35:20Z"
+    id: 8
+    initiatedBy:
+      automated: true
+    revision: 4b85d8646eabc106d3e33b67d2299e1c6992a8c1
+    source:
+      path: infrastructure/kubernetes
+      repoURL: https://github.com/asutaka/Testmicroservice.git
+      targetRevision: HEAD
+  - deployStartedAt: "2026-03-20T19:39:25Z"
+    deployedAt: "2026-03-20T19:39:26Z"
+    id: 9
+    initiatedBy:
+      automated: true
+    revision: eb11cba1d9c6c64f296921f6499a7044987c3a12
+    source:
+      path: infrastructure/kubernetes
+      repoURL: https://github.com/asutaka/Testmicroservice.git
+      targetRevision: HEAD
+  - deployStartedAt: "2026-03-20T19:43:23Z"
+    deployedAt: "2026-03-20T19:43:24Z"
+    id: 10
+    initiatedBy:
+      automated: true
+    revision: 76b16ed3469a2d6a60ac3e005fc3483a6c775697
+    source:
+      path: infrastructure/kubernetes
+      repoURL: https://github.com/asutaka/Testmicroservice.git
+      targetRevision: HEAD
+  - deployStartedAt: "2026-03-20T19:47:05Z"
+    deployedAt: "2026-03-20T19:47:05Z"
+    id: 11
+    initiatedBy:
+      username: admin
+    revision: 76b16ed3469a2d6a60ac3e005fc3483a6c775697
+    source:
+      path: infrastructure/kubernetes
+      repoURL: https://github.com/asutaka/Testmicroservice.git
+      targetRevision: HEAD
+  operationState:
+    finishedAt: "2026-03-20T19:47:05Z"
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        username: admin
+      retry: {}
+      sync:
+        revision: 76b16ed3469a2d6a60ac3e005fc3483a6c775697
+        source:
+          path: infrastructure/kubernetes
+          repoURL: https://github.com/asutaka/Testmicroservice.git
+          targetRevision: HEAD
+        syncOptions:
+        - CreateNamespace=true
+        syncStrategy:
+          hook: {}
+    phase: Succeeded
+    startedAt: "2026-03-20T19:47:05Z"
+    syncResult:
+      resources:
+      - group: ""
+        hookPhase: Running
+        kind: Namespace
+        message: namespace/microservices unchanged
+        name: microservices
+        namespace: microservices
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ""
+        hookPhase: Running
+        kind: ConfigMap
+        message: configmap/microservices-config unchanged
+        name: microservices-config
+        namespace: microservices
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ""
+        hookPhase: Running
+        kind: Service
+        message: service/user-service unchanged
+        name: user-service
+        namespace: microservices
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ""
+        hookPhase: Running
+        kind: Service
+        message: service/order-service unchanged
+        name: order-service
+        namespace: microservices
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ""
+        hookPhase: Running
+        kind: Service
+        message: service/api-gateway unchanged
+        name: api-gateway
+        namespace: microservices
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - ghcr.io/asutaka/api-gateway:latest
+        kind: Deployment
+        message: deployment.apps/api-gateway unchanged
+        name: api-gateway
+        namespace: microservices
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - ghcr.io/asutaka/user-service:latest
+        kind: Deployment
+        message: deployment.apps/user-service unchanged
+        name: user-service
+        namespace: microservices
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - ghcr.io/asutaka/order-service:latest
+        kind: Deployment
+        message: deployment.apps/order-service unchanged
+        name: order-service
+        namespace: microservices
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: ExternalSecret
+        message: externalsecret.external-secrets.io/db-secrets-sync configured
+        name: db-secrets-sync
+        namespace: microservices
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: argoproj.io
+        hookPhase: Running
+        kind: Application
+        message: application.argoproj.io/test-microservices unchanged
+        name: test-microservices
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: ClusterSecretStore
+        message: clustersecretstore.external-secrets.io/vault-backend unchanged
+        name: vault-backend
+        namespace: microservices
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: 76b16ed3469a2d6a60ac3e005fc3483a6c775697
+      source:
+        path: infrastructure/kubernetes
+        repoURL: https://github.com/asutaka/Testmicroservice.git
+        targetRevision: HEAD
+  reconciledAt: "2026-03-21T09:16:07Z"
+  resourceHealthSource: appTree
+  resources:
+  - kind: ConfigMap
+    name: microservices-config
+    namespace: microservices
+    requiresPruning: true
+    status: Unknown
+    version: v1
+  - kind: Namespace
+    name: microservices
+    requiresPruning: true
+    status: Unknown
+    version: v1
+  - kind: Service
+    name: api-gateway
+    namespace: microservices
+    requiresPruning: true
+    status: Unknown
+    version: v1
+  - kind: Service
+    name: order-service
+    namespace: microservices
+    requiresPruning: true
+    status: Unknown
+    version: v1
+  - kind: Service
+    name: user-service
+    namespace: microservices
+    requiresPruning: true
+    status: Unknown
+    version: v1
+  - group: apps
+    kind: Deployment
+    name: api-gateway
+    namespace: microservices
+    requiresPruning: true
+    status: Unknown
+    version: v1
+  - group: apps
+    kind: Deployment
+    name: order-service
+    namespace: microservices
+    requiresPruning: true
+    status: Unknown
+    version: v1
+  - group: apps
+    kind: Deployment
+    name: user-service
+    namespace: microservices
+    requiresPruning: true
+    status: Unknown
+    version: v1
+  - group: argoproj.io
+    kind: Application
+    name: test-microservices
+    namespace: argocd
+    requiresPruning: true
+    status: Unknown
+    version: v1alpha1
+  - group: external-secrets.io
+    kind: ClusterSecretStore
+    name: vault-backend
+    requiresPruning: true
+    status: Unknown
+    version: v1
+  - group: external-secrets.io
+    kind: ExternalSecret
+    name: db-secrets-sync
+    namespace: microservices
+    requiresPruning: true
+    status: Unknown
+    version: v1
+  sourceHydrator: {}
+  summary:
+    images:
+    - ghcr.io/asutaka/api-gateway:latest
+    - ghcr.io/asutaka/order-service:latest
+    - ghcr.io/asutaka/user-service:latest
+  sync:
+    comparedTo:
+      destination:
+        namespace: microservices
+        server: https://kubernetes.default.svc
+      source:
+        path: infrastructure/kubernetes
+        repoURL: https://github.com/asutaka/Testmicroservice.git
+        targetRevision: HEAD
+    revision: HEAD
+    status: Unknown

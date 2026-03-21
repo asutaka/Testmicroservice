@@ -1,0 +1,22 @@
+
+    Directory: C:\Users\asutaka\Desktop\TestMicroservice\infrastructure\kubernetes
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          21/03/2026  2:36 AM           1294 api-gate
+                                                  way.yaml
+-a---          18/03/2026 12:01 AM            533 argocd-a
+                                                  pp.yaml
+-a---          14/03/2026  2:12 PM            107 namespac
+                                                  e.yaml
+-a---          21/03/2026  2:36 AM           1918 order-se
+                                                  rvice.ya
+                                                  ml
+-a---          21/03/2026  2:36 AM           1878 user-ser
+                                                  vice.yam
+                                                  l
+-a---          21/03/2026  1:15 AM           1368 vault-ex
+                                                  ternal-s
+                                                  ecrets.y
+                                                  aml
+

@@ -1,0 +1,2 @@
+NAME              STORETYPE            STORE           REFRESH INTERVAL   STATUS              READY
+db-secrets-sync   ClusterSecretStore   vault-backend   15s                SecretSyncedError   False

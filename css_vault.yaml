@@ -1,0 +1,31 @@
+apiVersion: external-secrets.io/v1
+kind: ClusterSecretStore
+metadata:
+  annotations:
+    argocd.argoproj.io/tracking-id: test-microservices:external-secrets.io/ClusterSecretStore:microservices/vault-backend
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"external-secrets.io/v1","kind":"ClusterSecretStore","metadata":{"annotations":{"argocd.argoproj.io/tracking-id":"test-microservices:external-secrets.io/ClusterSecretStore:microservices/vault-backend"},"name":"vault-backend"},"spec":{"provider":{"vault":{"auth":{"tokenSecretRef":{"key":"token","name":"vault-token-secret","namespace":"external-secrets"}},"path":"secret","server":"http://vault.vault.svc.cluster.local:8200","version":"v2"}}}}
+  creationTimestamp: "2026-03-20T18:15:38Z"
+  generation: 3
+  name: vault-backend
+  resourceVersion: "67437"
+  uid: ab5c4be1-6e09-4d2e-968a-731fbb99e91d
+spec:
+  provider:
+    vault:
+      auth:
+        tokenSecretRef:
+          key: token
+          name: vault-token-secret
+          namespace: external-secrets
+      path: secret
+      server: http://vault.vault.svc.cluster.local:8200
+      version: v2
+status:
+  capabilities: ReadWrite
+  conditions:
+  - lastTransitionTime: "2026-03-20T18:17:43Z"
+    message: store validated
+    reason: Valid
+    status: "True"
+    type: Ready

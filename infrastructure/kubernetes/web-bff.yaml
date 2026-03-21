@@ -1,0 +1,61 @@
+---
+# WebBff Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-bff
+  namespace: microservices
+  labels:
+    app: web-bff
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-bff
+  template:
+    metadata:
+      labels:
+        app: web-bff
+    spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+      containers:
+        - name: web-bff
+          image: ghcr.io/asutaka/web-bff:latest
+          ports:
+            - containerPort: 5010
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Production
+            - name: Services__UserService
+              value: "http://user-service:5001"
+            - name: Services__OrderService
+              value: "http://order-service:5002"
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          # readinessProbe:
+          #   httpGet:
+          #     path: /health
+          #     port: 5010
+          #   initialDelaySeconds: 15
+          #   periodSeconds: 10
+---
+# WebBff Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-bff
+  namespace: microservices
+spec:
+  selector:
+    app: web-bff
+  ports:
+    - name: http
+      port: 5010
+      targetPort: 5010
+  type: ClusterIP

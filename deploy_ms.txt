@@ -1,0 +1,4 @@
+NAME            READY   UP-TO-DATE   AVAILABLE   AGE
+api-gateway     2/2     2            2           2d15h
+order-service   2/2     2            2           2d15h
+user-service    2/2     2            2           2d15h

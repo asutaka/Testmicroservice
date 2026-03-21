@@ -1,0 +1,45 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	app_describe.txt
+	app_final_status.txt
+	app_new.txt
+	app_resources_json.txt
+	app_yaml.txt
+	controller_logs.txt
+	css_vault.yaml
+	deploy_ms.txt
+	deployment.yaml
+	es_describe.txt
+	es_logs.txt
+	es_ms.txt
+	git_status.txt
+	infrastructure/kubernetes/payment-service.yaml
+	infrastructure/kubernetes/rabbitmq.yaml
+	infrastructure/kubernetes/web-bff.yaml
+	k8s_files.txt
+	pod_detail.yaml
+	pods.txt
+	pods_all.txt
+	pods_final.txt
+	pods_final_2.txt
+	pods_final_3.txt
+	pods_ms.txt
+	pods_ms_labels.txt
+	pods_new.txt
+	pods_vault.txt
+	repo_server_logs.txt
+	server_logs_recent.txt
+	services.txt
+	services_dir.txt
+	svc_ms.txt
+	token_b64.txt
+	user_service_logs.txt
+	user_service_logs_final.txt
+	vault_pod_describe.txt
+	vault_secrets.txt
+	vault_token_base64.txt
+
+nothing added to commit but untracked files present (use "git add" to track)

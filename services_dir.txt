@@ -1,0 +1,12 @@
+
+    Directory: C:\Users\asutaka\Desktop\TestMicroservice\services
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          14/03/2026  2:09 PM                OrderSer
+                                                  vice
+d----          14/03/2026  2:10 PM                PaymentS
+                                                  ervice
+d----          14/03/2026  2:06 PM                UserServ
+                                                  ice
+

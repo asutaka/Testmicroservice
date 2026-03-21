@@ -1,0 +1,68 @@
+---
+# PaymentService Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-service
+  namespace: microservices
+  labels:
+    app: payment-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payment-service
+  template:
+    metadata:
+      labels:
+        app: payment-service
+    spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+      containers:
+        - name: payment-service
+          image: ghcr.io/asutaka/payment-service:latest
+          ports:
+            - containerPort: 5003  # REST
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Production
+            - name: RabbitMQ__Host
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-config
+                  key: rabbitmq-host
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          # readinessProbe:
+          #   httpGet:
+          #     path: /health
+          #     port: 5003
+          #   initialDelaySeconds: 10
+          #   periodSeconds: 10
+          # livenessProbe:
+          #   httpGet:
+          #     path: /health
+          #     port: 5003
+          #   initialDelaySeconds: 30
+          #   periodSeconds: 30
+---
+# PaymentService Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment-service
+  namespace: microservices
+spec:
+  selector:
+    app: payment-service
+  ports:
+    - name: http
+      port: 5003
+      targetPort: 5003
+  type: ClusterIP

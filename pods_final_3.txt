@@ -1,0 +1,7 @@
+argocd-application-controller-0                     1/1   Running   0              25s
+argocd-applicationset-controller-56df666b4f-7j2ck   1/1   Running   1 (165m ago)   15h
+argocd-dex-server-7d5948f554-g42pc                  1/1   Running   1 (165m ago)   15h
+argocd-notifications-controller-7cd4dc4bf6-dr4km    1/1   Running   1 (165m ago)   15h
+argocd-redis-788dd7db77-plqh9                       1/1   Running   1 (165m ago)   15h
+argocd-repo-server-697946558-hss87                  1/1   Running   0              4m10s
+argocd-server-7f44fd8cd5-nftp2                      1/1   Running   2 (164m ago)   15h

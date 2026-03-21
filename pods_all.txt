@@ -1,0 +1,29 @@
+NAMESPACE            NAME                                                READY   STATUS    RESTARTS        AGE
+argocd               argocd-application-controller-0                     1/1     Running   0               71m
+argocd               argocd-applicationset-controller-56df666b4f-7j2ck   1/1     Running   1 (3h56m ago)   16h
+argocd               argocd-dex-server-7d5948f554-g42pc                  1/1     Running   1 (3h56m ago)   16h
+argocd               argocd-notifications-controller-7cd4dc4bf6-dr4km    1/1     Running   1 (3h56m ago)   16h
+argocd               argocd-redis-788dd7db77-plqh9                       1/1     Running   1 (3h56m ago)   16h
+argocd               argocd-repo-server-697946558-hss87                  1/1     Running   0               75m
+argocd               argocd-server-7f44fd8cd5-nftp2                      1/1     Running   2 (3h56m ago)   16h
+external-secrets     external-secrets-789664cb66-8dvgv                   1/1     Running   3 (3h55m ago)   2d16h
+external-secrets     external-secrets-cert-controller-699c499d-jsv4v     1/1     Running   4 (3h55m ago)   2d16h
+external-secrets     external-secrets-webhook-7bc87bf876-vzbbc           1/1     Running   2 (3h56m ago)   2d16h
+kube-system          coredns-7c65d6cfc9-fpf6m                            1/1     Running   2 (3h56m ago)   3d
+kube-system          coredns-7c65d6cfc9-mb6ft                            1/1     Running   2 (3h56m ago)   3d
+kube-system          etcd-desktop-control-plane                          1/1     Running   0               3h55m
+kube-system          kindnet-kgtzm                                       1/1     Running   2 (3h56m ago)   3d
+kube-system          kube-apiserver-desktop-control-plane                1/1     Running   0               3h55m
+kube-system          kube-controller-manager-desktop-control-plane       1/1     Running   3 (3h56m ago)   3d
+kube-system          kube-proxy-qmdds                                    1/1     Running   2 (3h56m ago)   3d
+kube-system          kube-scheduler-desktop-control-plane                1/1     Running   2 (3h56m ago)   3d
+local-path-storage   local-path-provisioner-57c5987fd4-xlzzp             1/1     Running   4 (3h55m ago)   3d
+microservices        api-gateway-54574bff6f-fd7j9                        1/1     Running   1 (3h56m ago)   14h
+microservices        api-gateway-54574bff6f-gzdpv                        1/1     Running   1 (3h56m ago)   14h
+microservices        order-service-5d8d9b9559-fxf2p                      1/1     Running   1 (3h56m ago)   14h
+microservices        order-service-5d8d9b9559-msf5s                      1/1     Running   1 (3h56m ago)   14h
+microservices        postgres-postgresql-0                               1/1     Running   1 (3h56m ago)   15h
+microservices        user-service-666558ff45-l6bgk                       1/1     Running   1 (3h56m ago)   14h
+microservices        user-service-666558ff45-rnx9p                       1/1     Running   1 (3h56m ago)   14h
+vault                vault-0                                             1/1     Running   2 (3h56m ago)   2d16h
+vault                vault-agent-injector-5db7599855-bjlct               1/1     Running   2 (3h56m ago)   2d16h

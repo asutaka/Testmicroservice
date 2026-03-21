@@ -1,0 +1,82 @@
+Name:             vault-0
+Namespace:        vault
+Priority:         0
+Service Account:  vault
+Node:             desktop-control-plane/172.21.0.5
+Start Time:       Thu, 19 Mar 2026 01:07:59 +0700
+Labels:           app.kubernetes.io/instance=vault
+                  app.kubernetes.io/name=vault
+                  apps.kubernetes.io/pod-index=0
+                  component=server
+                  controller-revision-hash=vault-559ff747cb
+                  helm.sh/chart=vault-0.32.0
+                  statefulset.kubernetes.io/pod-name=vault-0
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.3
+IPs:
+  IP:           10.244.0.3
+Controlled By:  StatefulSet/vault
+Containers:
+  vault:
+    Container ID:  containerd://be057debcaf61b380879df8d012d95b11fb280447876e861d4f0572c1672c7a3
+    Image:         hashicorp/vault:1.21.2
+    Image ID:      docker.io/hashicorp/vault@sha256:eb0ba6836e8d4699b7a1e8ca70d8433f7b87dcd067e6d82dff237d3ed2600ea0
+    Ports:         8200/TCP (http), 8201/TCP (https-internal), 8202/TCP (http-rep)
+    Host Ports:    0/TCP (http), 0/TCP (https-internal), 0/TCP (http-rep)
+    Command:
+      /bin/sh
+      -ec
+    Args:
+      /usr/local/bin/docker-entrypoint.sh vault server -dev 
+      
+    State:          Running
+      Started:      Sat, 21 Mar 2026 13:36:04 +0700
+    Last State:     Terminated
+      Reason:       Unknown
+      Exit Code:    255
+      Started:      Fri, 20 Mar 2026 22:16:45 +0700
+      Finished:     Sat, 21 Mar 2026 13:35:52 +0700
+    Ready:          True
+    Restart Count:  2
+    Readiness:      exec [/bin/sh -ec vault status -tls-skip-verify] delay=5s timeout=3s period=5s #success=1 #failure=2
+    Environment:
+      HOST_IP:                    (v1:status.hostIP)
+      POD_IP:                     (v1:status.podIP)
+      VAULT_K8S_POD_NAME:        vault-0 (v1:metadata.name)
+      VAULT_K8S_NAMESPACE:       vault (v1:metadata.namespace)
+      VAULT_ADDR:                http://127.0.0.1:8200
+      VAULT_API_ADDR:            http://$(POD_IP):8200
+      SKIP_CHOWN:                true
+      SKIP_SETCAP:               true
+      HOSTNAME:                  vault-0 (v1:metadata.name)
+      VAULT_CLUSTER_ADDR:        https://$(HOSTNAME).vault-internal:8201
+      HOME:                      /home/vault
+      VAULT_DEV_ROOT_TOKEN_ID:   root
+      VAULT_DEV_LISTEN_ADDRESS:  [::]:8200
+    Mounts:
+      /home/vault from home (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-k2sht (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  home:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-k2sht:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:                      <none>
