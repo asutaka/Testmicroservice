@@ -39,10 +39,9 @@ public sealed class UserConfiguration : IEntityTypeConfiguration<User>
                 .IsRequired()
                 .HasMaxLength(256)
                 .HasColumnName("Email");
+                
+            email.HasIndex(e => e.Value).IsUnique();
         });
-
-        builder.HasIndex("Email_Value")
-            .IsUnique();
 
         // Ignore domain events (not persisted)
         builder.Ignore(u => u.DomainEvents);
