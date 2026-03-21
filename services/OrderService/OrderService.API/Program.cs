@@ -3,6 +3,8 @@ using Microsoft.OpenApi.Models;
 using Observability.Extensions;
 using OrderService.Application.Commands.CreateOrder;
 using OrderService.Infrastructure;
+using OrderService.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 using UserService.Contracts.Grpc;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -43,6 +45,15 @@ builder.Services.AddObservability("OrderService");
 builder.Services.AddHealthChecks();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
+    if (dbContext.Database.IsRelational())
+    {
+        dbContext.Database.Migrate();
+    }
+}
 
 if (app.Environment.IsDevelopment())
 {

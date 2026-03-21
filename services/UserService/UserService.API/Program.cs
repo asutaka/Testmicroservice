@@ -5,7 +5,8 @@ using Observability.Extensions;
 using UserService.API.GrpcServices;
 using UserService.Application.Commands.CreateUser;
 using UserService.Infrastructure;
-
+using UserService.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // ─── Services ─────────────────────────────────────────────────────────────────
@@ -57,6 +58,15 @@ builder.Services.AddHealthChecks();
 // ─── Pipeline ─────────────────────────────────────────────────────────────────
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<UserDbContext>();
+    if (dbContext.Database.IsRelational())
+    {
+        dbContext.Database.Migrate();
+    }
+}
 
 if (app.Environment.IsDevelopment())
 {

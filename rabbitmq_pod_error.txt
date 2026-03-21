@@ -1,0 +1,63 @@
+Name:             rabbitmq-b8657f5cc-hrrls
+Namespace:        microservices
+Priority:         0
+Service Account:  default
+Node:             desktop-control-plane/172.21.0.5
+Start Time:       Sat, 21 Mar 2026 17:40:20 +0700
+Labels:           app=rabbitmq
+                  pod-template-hash=b8657f5cc
+Annotations:      <none>
+Status:           Pending
+IP:               10.244.0.26
+IPs:
+  IP:           10.244.0.26
+Controlled By:  ReplicaSet/rabbitmq-b8657f5cc
+Containers:
+  rabbitmq:
+    Container ID:   
+    Image:          rabbitmq:3.13-management
+    Image ID:       
+    Ports:          5672/TCP (amqp), 15672/TCP (management)
+    Host Ports:     0/TCP (amqp), 0/TCP (management)
+    State:          Waiting
+      Reason:       ImagePullBackOff
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  512Mi
+    Requests:
+      cpu:     100m
+      memory:  256Mi
+    Environment:
+      RABBITMQ_DEFAULT_USER:  guest
+      RABBITMQ_DEFAULT_PASS:  guest
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-tr62s (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-tr62s:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                 From               Message
+  ----     ------     ----                ----               -------
+  Normal   Scheduled  40m                 default-scheduler  Successfully assigned microservices/rabbitmq-b8657f5cc-hrrls to desktop-control-plane
+  Normal   Pulling    38m (x4 over 40m)   kubelet            Pulling image "rabbitmq:3.13-management"
+  Warning  Failed     38m (x4 over 39m)   kubelet            Failed to pull image "rabbitmq:3.13-management": failed to pull and unpack image "docker.io/library/rabbitmq:3.13-management": failed to read expected number of bytes: unexpected EOF
+  Warning  Failed     38m (x4 over 39m)   kubelet            Error: ErrImagePull
+  Warning  Failed     37m (x6 over 39m)   kubelet            Error: ImagePullBackOff
+  Normal   BackOff    9s (x168 over 39m)  kubelet            Back-off pulling image "rabbitmq:3.13-management"
