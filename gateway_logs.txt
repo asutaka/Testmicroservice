@@ -1,0 +1,40 @@
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Health checks'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Health checks'
+info: ApiGateway.Middleware.RequestLoggingMiddleware[0]
+      ← [b88265eb] 200 (0.2ms)
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://10.244.0.34:5000/health - 200 - text/plain 0.4375ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://10.244.0.34:5000/health - - -
+info: ApiGateway.Middleware.RequestLoggingMiddleware[0]
+      → [7cac3802] GET /health
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Health checks'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Health checks'
+info: ApiGateway.Middleware.RequestLoggingMiddleware[0]
+      ← [7cac3802] 200 (0.8ms)
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://10.244.0.34:5000/health - 200 - text/plain 0.9692ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Health checks'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Health checks'
+info: ApiGateway.Middleware.RequestLoggingMiddleware[0]
+      ← [4d2d2fc8] 200 (0.3ms)
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://10.244.0.35:5000/health - 200 - text/plain 0.4678ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://10.244.0.35:5000/health - - -
+info: ApiGateway.Middleware.RequestLoggingMiddleware[0]
+      → [a636e5d2] GET /health
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Health checks'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Health checks'
+info: ApiGateway.Middleware.RequestLoggingMiddleware[0]
+      ← [a636e5d2] 200 (0.5ms)
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://10.244.0.35:5000/health - 200 - text/plain 0.6636ms

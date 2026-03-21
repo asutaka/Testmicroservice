@@ -1,0 +1,9 @@
+NAME                     TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)              AGE
+api-gateway              LoadBalancer   10.96.51.90     <pending>     80:30253/TCP         2d19h
+order-service            ClusterIP      10.96.59.29     <none>        5002/TCP,5102/TCP    2d19h
+payment-service          ClusterIP      10.96.146.205   <none>        5003/TCP             3h11m
+postgres-postgresql      ClusterIP      10.96.168.153   <none>        5432/TCP             18h
+postgres-postgresql-hl   ClusterIP      None            <none>        5432/TCP             18h
+rabbitmq                 ClusterIP      10.96.121.70    <none>        5672/TCP,15672/TCP   3h11m
+user-service             ClusterIP      10.96.62.75     <none>        5001/TCP,5101/TCP    2d19h
+web-bff                  ClusterIP      10.96.74.108    <none>        5010/TCP             3h11m

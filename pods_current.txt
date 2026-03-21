@@ -1,0 +1,11 @@
+NAME                               READY   STATUS    RESTARTS        AGE
+api-gateway-54574bff6f-fd7j9       1/1     Running   1 (7h13m ago)   18h
+api-gateway-54574bff6f-gzdpv       1/1     Running   1 (7h13m ago)   18h
+order-service-5d8d9b9559-fxf2p     1/1     Running   1 (7h13m ago)   18h
+order-service-5d8d9b9559-msf5s     1/1     Running   1 (7h13m ago)   18h
+payment-service-6bb97796d8-vqbxj   1/1     Running   0               130m
+postgres-postgresql-0              1/1     Running   1 (7h13m ago)   18h
+rabbitmq-6979486b9b-lz524          1/1     Running   0               136m
+user-service-666558ff45-l6bgk      1/1     Running   1 (7h13m ago)   18h
+user-service-666558ff45-rnx9p      1/1     Running   1 (7h13m ago)   18h
+web-bff-677788cb69-v7wcd           1/1     Running   0               3h8m
