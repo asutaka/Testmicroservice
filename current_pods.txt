@@ -1,0 +1,14 @@
+NAME                               READY   STATUS    RESTARTS        AGE
+api-gateway-74677c77cb-7sv24       1/1     Running   1 (3h21m ago)   17h
+api-gateway-74677c77cb-nlnrw       1/1     Running   1 (3h21m ago)   17h
+grafana-6dc8689468-q7lnz           1/1     Running   1 (3h21m ago)   17h
+jaeger-857f7b5cb7-l67dt            1/1     Running   1 (3h21m ago)   17h
+order-service-7f799fd76b-dtsnv     1/1     Running   0               8m45s
+order-service-7f799fd76b-gtxh5     1/1     Running   0               8m14s
+payment-service-7b86bfd848-s24jz   1/1     Running   32 (64m ago)    17h
+postgres-postgresql-0              1/1     Running   2 (3h21m ago)   39h
+prometheus-558f9b985b-92zb2        1/1     Running   1 (3h21m ago)   17h
+rabbitmq-6979486b9b-lz524          1/1     Running   1 (3h21m ago)   23h
+user-service-668f56d7f8-hjwjx      1/1     Running   0               2m6s
+user-service-668f56d7f8-x67d9      1/1     Running   0               2m27s
+web-bff-59fd64f4db-pnh5r           1/1     Running   1 (3h21m ago)   17h

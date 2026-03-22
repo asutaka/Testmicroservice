@@ -1,0 +1,553 @@
+Name:         test-microservices
+Namespace:    argocd
+Labels:       <none>
+Annotations:  argocd.argoproj.io/tracking-id: test-microservices:argoproj.io/Application:argocd/test-microservices
+API Version:  argoproj.io/v1alpha1
+Kind:         Application
+Metadata:
+  Creation Timestamp:  2026-03-18T18:11:49Z
+  Generation:          869
+  Resource Version:    191814
+  UID:                 6f54c8a7-90a2-4588-af8c-d811e709b2b7
+Spec:
+  Destination:
+    Namespace:  microservices
+    Server:     https://kubernetes.default.svc
+  Project:      default
+  Source:
+    Path:             infrastructure/kubernetes
+    Repo URL:         https://github.com/asutaka/Testmicroservice.git
+    Target Revision:  HEAD
+  Sync Policy:
+    Automated:
+      Prune:      true
+      Self Heal:  true
+    Sync Options:
+      CreateNamespace=true
+Status:
+  Controller Namespace:  argocd
+  Health:
+    Last Transition Time:  2026-03-22T09:40:59Z
+    Status:                Progressing
+  History:
+    Deploy Started At:  2026-03-20T19:35:19Z
+    Deployed At:        2026-03-20T19:35:20Z
+    Id:                 8
+    Initiated By:
+      Automated:  true
+    Revision:     4b85d8646eabc106d3e33b67d2299e1c6992a8c1
+    Source:
+      Path:             infrastructure/kubernetes
+      Repo URL:         https://github.com/asutaka/Testmicroservice.git
+      Target Revision:  HEAD
+    Deploy Started At:  2026-03-20T19:39:25Z
+    Deployed At:        2026-03-20T19:39:26Z
+    Id:                 9
+    Initiated By:
+      Automated:  true
+    Revision:     eb11cba1d9c6c64f296921f6499a7044987c3a12
+    Source:
+      Path:             infrastructure/kubernetes
+      Repo URL:         https://github.com/asutaka/Testmicroservice.git
+      Target Revision:  HEAD
+    Deploy Started At:  2026-03-20T19:43:23Z
+    Deployed At:        2026-03-20T19:43:24Z
+    Id:                 10
+    Initiated By:
+      Automated:  true
+    Revision:     76b16ed3469a2d6a60ac3e005fc3483a6c775697
+    Source:
+      Path:             infrastructure/kubernetes
+      Repo URL:         https://github.com/asutaka/Testmicroservice.git
+      Target Revision:  HEAD
+    Deploy Started At:  2026-03-20T19:47:05Z
+    Deployed At:        2026-03-20T19:47:05Z
+    Id:                 11
+    Initiated By:
+      Username:  admin
+    Revision:    76b16ed3469a2d6a60ac3e005fc3483a6c775697
+    Source:
+      Path:             infrastructure/kubernetes
+      Repo URL:         https://github.com/asutaka/Testmicroservice.git
+      Target Revision:  HEAD
+    Deploy Started At:  2026-03-21T09:25:18Z
+    Deployed At:        2026-03-21T09:25:18Z
+    Id:                 12
+    Initiated By:
+      Username:  admin
+    Revision:    76b16ed3469a2d6a60ac3e005fc3483a6c775697
+    Source:
+      Path:             infrastructure/kubernetes
+      Repo URL:         https://github.com/asutaka/Testmicroservice.git
+      Target Revision:  HEAD
+    Deploy Started At:  2026-03-21T10:40:19Z
+    Deployed At:        2026-03-21T10:40:20Z
+    Id:                 13
+    Initiated By:
+      Automated:  true
+    Revision:     b141e845610c8c67b09b247b94effc3948f50b08
+    Source:
+      Path:             infrastructure/kubernetes
+      Repo URL:         https://github.com/asutaka/Testmicroservice.git
+      Target Revision:  HEAD
+    Deploy Started At:  2026-03-21T11:23:29Z
+    Deployed At:        2026-03-21T11:23:30Z
+    Id:                 14
+    Initiated By:
+      Automated:  true
+    Revision:     4cefc6beccd4e7e7119ed481f56d7feabba806c3
+    Source:
+      Path:             infrastructure/kubernetes
+      Repo URL:         https://github.com/asutaka/Testmicroservice.git
+      Target Revision:  HEAD
+    Deploy Started At:  2026-03-21T13:46:02Z
+    Deployed At:        2026-03-21T13:46:03Z
+    Id:                 15
+    Initiated By:
+      Username:  admin
+    Revision:    36379a149519e789156d9cb796fac625cd3e9642
+    Source:
+      Path:             infrastructure/kubernetes
+      Repo URL:         https://github.com/asutaka/Testmicroservice.git
+      Target Revision:  HEAD
+    Deploy Started At:  2026-03-21T16:58:09Z
+    Deployed At:        2026-03-21T16:58:11Z
+    Id:                 16
+    Initiated By:
+      Automated:  true
+    Revision:     95565ab068d26acdf15235a68555bd00835443e8
+    Source:
+      Path:             infrastructure/kubernetes
+      Repo URL:         https://github.com/asutaka/Testmicroservice.git
+      Target Revision:  HEAD
+    Deploy Started At:  2026-03-21T17:24:01Z
+    Deployed At:        2026-03-21T17:24:03Z
+    Id:                 17
+    Initiated By:
+      Username:  admin
+    Revision:    d1774924d9c4154f0f3e3acd6e25ea7078b583e0
+    Source:
+      Path:             infrastructure/kubernetes
+      Repo URL:         https://github.com/asutaka/Testmicroservice.git
+      Target Revision:  HEAD
+  Operation State:
+    Finished At:  2026-03-21T17:24:03Z
+    Message:      successfully synced (all tasks run)
+    Operation:
+      Initiated By:
+        Username:  admin
+      Retry:
+      Sync:
+        Revision:  d1774924d9c4154f0f3e3acd6e25ea7078b583e0
+        Source:
+          Path:             infrastructure/kubernetes
+          Repo URL:         https://github.com/asutaka/Testmicroservice.git
+          Target Revision:  HEAD
+        Sync Options:
+          CreateNamespace=true
+        Sync Strategy:
+          Hook:
+    Phase:       Succeeded
+    Started At:  2026-03-21T17:24:01Z
+    Sync Result:
+      Resources:
+        Group:       
+        Hook Phase:  Running
+        Kind:        Namespace
+        Message:     namespace/microservices unchanged
+        Name:        microservices
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       
+        Hook Phase:  Running
+        Kind:        ConfigMap
+        Message:     configmap/prometheus-config unchanged
+        Name:        prometheus-config
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       
+        Hook Phase:  Running
+        Kind:        ConfigMap
+        Message:     configmap/microservices-config unchanged
+        Name:        microservices-config
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       
+        Hook Phase:  Running
+        Kind:        Service
+        Message:     service/jaeger unchanged
+        Name:        jaeger
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       
+        Hook Phase:  Running
+        Kind:        Service
+        Message:     service/rabbitmq unchanged
+        Name:        rabbitmq
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       
+        Hook Phase:  Running
+        Kind:        Service
+        Message:     service/api-gateway unchanged
+        Name:        api-gateway
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       
+        Hook Phase:  Running
+        Kind:        Service
+        Message:     service/user-service unchanged
+        Name:        user-service
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       
+        Hook Phase:  Running
+        Kind:        Service
+        Message:     service/web-bff unchanged
+        Name:        web-bff
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       
+        Hook Phase:  Running
+        Kind:        Service
+        Message:     service/payment-service unchanged
+        Name:        payment-service
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       
+        Hook Phase:  Running
+        Kind:        Service
+        Message:     service/grafana unchanged
+        Name:        grafana
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       
+        Hook Phase:  Running
+        Kind:        Service
+        Message:     service/prometheus unchanged
+        Name:        prometheus
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       
+        Hook Phase:  Running
+        Kind:        Service
+        Message:     service/order-service unchanged
+        Name:        order-service
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       apps
+        Hook Phase:  Running
+        Images:
+          rabbitmq:3.13-management-alpine
+        Kind:        Deployment
+        Message:     deployment.apps/rabbitmq unchanged
+        Name:        rabbitmq
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       apps
+        Hook Phase:  Running
+        Images:
+          ghcr.io/asutaka/order-service:latest
+        Kind:        Deployment
+        Message:     deployment.apps/order-service unchanged
+        Name:        order-service
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       apps
+        Hook Phase:  Running
+        Images:
+          ghcr.io/asutaka/payment-service:latest
+        Kind:        Deployment
+        Message:     deployment.apps/payment-service unchanged
+        Name:        payment-service
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       apps
+        Hook Phase:  Running
+        Images:
+          jaegertracing/all-in-one:1.58
+        Kind:        Deployment
+        Message:     deployment.apps/jaeger unchanged
+        Name:        jaeger
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       apps
+        Hook Phase:  Running
+        Images:
+          ghcr.io/asutaka/web-bff:latest
+        Kind:        Deployment
+        Message:     deployment.apps/web-bff unchanged
+        Name:        web-bff
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       apps
+        Hook Phase:  Running
+        Images:
+          prom/prometheus:v2.53.0
+        Kind:        Deployment
+        Message:     deployment.apps/prometheus unchanged
+        Name:        prometheus
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       apps
+        Hook Phase:  Running
+        Images:
+          ghcr.io/asutaka/user-service:latest
+        Kind:        Deployment
+        Message:     deployment.apps/user-service unchanged
+        Name:        user-service
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       apps
+        Hook Phase:  Running
+        Images:
+          ghcr.io/asutaka/api-gateway:latest
+        Kind:        Deployment
+        Message:     deployment.apps/api-gateway unchanged
+        Name:        api-gateway
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       apps
+        Hook Phase:  Running
+        Images:
+          grafana/grafana:11.1.0
+        Kind:        Deployment
+        Message:     deployment.apps/grafana unchanged
+        Name:        grafana
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       external-secrets.io
+        Hook Phase:  Running
+        Kind:        ExternalSecret
+        Message:     externalsecret.external-secrets.io/db-secrets-sync configured
+        Name:        db-secrets-sync
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       argoproj.io
+        Hook Phase:  Running
+        Kind:        Application
+        Message:     application.argoproj.io/test-microservices unchanged
+        Name:        test-microservices
+        Namespace:   argocd
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1alpha1
+        Group:       external-secrets.io
+        Hook Phase:  Running
+        Kind:        ClusterSecretStore
+        Message:     clustersecretstore.external-secrets.io/vault-backend unchanged
+        Name:        vault-backend
+        Namespace:   microservices
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+      Revision:      d1774924d9c4154f0f3e3acd6e25ea7078b583e0
+      Source:
+        Path:              infrastructure/kubernetes
+        Repo URL:          https://github.com/asutaka/Testmicroservice.git
+        Target Revision:   HEAD
+  Reconciled At:           2026-03-22T10:39:19Z
+  Resource Health Source:  appTree
+  Resources:
+    Kind:       ConfigMap
+    Name:       microservices-config
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Kind:       ConfigMap
+    Name:       prometheus-config
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Kind:       Namespace
+    Name:       microservices
+    Status:     Synced
+    Version:    v1
+    Kind:       Service
+    Name:       api-gateway
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Kind:       Service
+    Name:       grafana
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Kind:       Service
+    Name:       jaeger
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Kind:       Service
+    Name:       order-service
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Kind:       Service
+    Name:       payment-service
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Kind:       Service
+    Name:       prometheus
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Kind:       Service
+    Name:       rabbitmq
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Kind:       Service
+    Name:       user-service
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Kind:       Service
+    Name:       web-bff
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Group:      apps
+    Kind:       Deployment
+    Name:       api-gateway
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Group:      apps
+    Kind:       Deployment
+    Name:       grafana
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Group:      apps
+    Kind:       Deployment
+    Name:       jaeger
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Group:      apps
+    Kind:       Deployment
+    Name:       order-service
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Group:      apps
+    Kind:       Deployment
+    Name:       payment-service
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Group:      apps
+    Kind:       Deployment
+    Name:       prometheus
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Group:      apps
+    Kind:       Deployment
+    Name:       rabbitmq
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Group:      apps
+    Kind:       Deployment
+    Name:       user-service
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Group:      apps
+    Kind:       Deployment
+    Name:       web-bff
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+    Group:      argoproj.io
+    Kind:       Application
+    Name:       test-microservices
+    Namespace:  argocd
+    Status:     Synced
+    Version:    v1alpha1
+    Group:      external-secrets.io
+    Kind:       ClusterSecretStore
+    Name:       vault-backend
+    Status:     Synced
+    Version:    v1
+    Group:      external-secrets.io
+    Kind:       ExternalSecret
+    Name:       db-secrets-sync
+    Namespace:  microservices
+    Status:     Synced
+    Version:    v1
+  Source Hydrator:
+  Source Type:  Directory
+  Summary:
+    Images:
+      ghcr.io/asutaka/api-gateway:latest
+      ghcr.io/asutaka/order-service:latest
+      ghcr.io/asutaka/payment-service:latest
+      ghcr.io/asutaka/user-service:latest
+      ghcr.io/asutaka/web-bff:latest
+      grafana/grafana:11.1.0
+      jaegertracing/all-in-one:1.58
+      prom/prometheus:v2.53.0
+      rabbitmq:3.13-management-alpine
+  Sync:
+    Compared To:
+      Destination:
+        Namespace:  microservices
+        Server:     https://kubernetes.default.svc
+      Source:
+        Path:             infrastructure/kubernetes
+        Repo URL:         https://github.com/asutaka/Testmicroservice.git
+        Target Revision:  HEAD
+    Revision:             2b924d233ad263d2439d8d53a3f08ce5139efa38
+    Status:               Synced
+Events:
+  Type    Reason           Age   From                           Message
+  ----    ------           ----  ----                           -------
+  Normal  ResourceUpdated  59m   argocd-application-controller  Updated health status: Degraded -> Progressing
