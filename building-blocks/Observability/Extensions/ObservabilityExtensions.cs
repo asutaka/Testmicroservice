@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using OpenTelemetry.Metrics;
+using Npgsql;
 
 namespace Observability.Extensions;
 
@@ -22,11 +23,7 @@ public static class ObservabilityExtensions
                 tracing
                     .AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation()
-                    .AddEntityFrameworkCoreInstrumentation(options =>
-                    {
-                        options.SetDbStatementForText = true;
-                        options.SetDbStatementForStoredProcedure = true;
-                    })
+                    .AddNpgsql() // From Npgsql.OpenTelemetry
                     .AddGrpcClientInstrumentation()  // from OpenTelemetry.Instrumentation.GrpcNetClient
                     .AddJaegerExporter(o =>
                     {

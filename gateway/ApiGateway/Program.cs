@@ -4,6 +4,12 @@ using Microsoft.AspNetCore.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// ── CORS ───────────────────────────────────────────────────────────────────────
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", b => b.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
 // ── YARP Reverse Proxy ─────────────────────────────────────────────────────────
 builder.Services
     .AddReverseProxy()
@@ -38,6 +44,7 @@ builder.Services.AddHealthChecks();
 var app = builder.Build();
 
 // ── Pipeline ───────────────────────────────────────────────────────────────────
+app.UseCors("AllowAll");
 app.UseMiddleware<RequestLoggingMiddleware>();
 app.UseRateLimiter();
 app.UseAuthentication();

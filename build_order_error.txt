@@ -1,0 +1,31 @@
+  Determining projects to restore...
+C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Observability.csproj : warning NU1603: Observability depends on Npgsql.OpenTelemetry (>= 8.0.11) but Npgsql.OpenTelemetry 8.0.11 was not found. Npgsql.OpenTelemetry 9.0.0 was resolved instead. [C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.API\OrderService.API.csproj]
+C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.API\OrderService.API.csproj : warning NU1603: Observability depends on Npgsql.OpenTelemetry (>= 8.0.11) but Npgsql.OpenTelemetry 8.0.11 was not found. Npgsql.OpenTelemetry 9.0.0 was resolved instead.
+  Restored C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.Contracts\OrderService.Contracts.csproj (in 422 ms).
+  Restored C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.Domain\OrderService.Domain.csproj (in 422 ms).
+  Restored C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.Application\OrderService.Application.csproj (in 422 ms).
+  Restored C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.Infrastructure\OrderService.Infrastructure.csproj (in 422 ms).
+  Restored C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.API\OrderService.API.csproj (in 523 ms).
+  4 of 9 projects are up-to-date for restore.
+C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.API\OrderService.API.csproj : warning NU1603: Observability depends on Npgsql.OpenTelemetry (>= 8.0.11) but Npgsql.OpenTelemetry 8.0.11 was not found. Npgsql.OpenTelemetry 9.0.0 was resolved instead.
+C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Observability.csproj : warning NU1603: Observability depends on Npgsql.OpenTelemetry (>= 8.0.11) but Npgsql.OpenTelemetry 8.0.11 was not found. Npgsql.OpenTelemetry 9.0.0 was resolved instead.
+C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Extensions\ObservabilityExtensions.cs(25,22): error CS1061: 'TracerProviderBuilder' does not contain a definition for 'AddNpgsql' and no accessible extension method 'AddNpgsql' accepting a first argument of type 'TracerProviderBuilder' could be found (are you missing a using directive or an assembly reference?) [C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Observability.csproj]
+  SharedKernel -> C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\SharedKernel\bin\Debug\net8.0\SharedKernel.dll
+  EventBus -> C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\EventBus\bin\Debug\net8.0\EventBus.dll
+  OrderService.Domain -> C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.Domain\bin\Debug\net8.0\OrderService.Domain.dll
+  OrderService.Contracts -> C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.Contracts\bin\Debug\net8.0\OrderService.Contracts.dll
+  UserService.Contracts -> C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.Contracts\bin\Debug\net8.0\UserService.Contracts.dll
+  OrderService.Application -> C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.Application\bin\Debug\net8.0\OrderService.Application.dll
+  OrderService.Infrastructure -> C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.Infrastructure\bin\Debug\net8.0\OrderService.Infrastructure.dll
+
+Build FAILED.
+
+C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Observability.csproj : warning NU1603: Observability depends on Npgsql.OpenTelemetry (>= 8.0.11) but Npgsql.OpenTelemetry 8.0.11 was not found. Npgsql.OpenTelemetry 9.0.0 was resolved instead. [C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.API\OrderService.API.csproj]
+C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.API\OrderService.API.csproj : warning NU1603: Observability depends on Npgsql.OpenTelemetry (>= 8.0.11) but Npgsql.OpenTelemetry 8.0.11 was not found. Npgsql.OpenTelemetry 9.0.0 was resolved instead.
+C:\Users\asutaka\Desktop\TestMicroservice\services\OrderService\OrderService.API\OrderService.API.csproj : warning NU1603: Observability depends on Npgsql.OpenTelemetry (>= 8.0.11) but Npgsql.OpenTelemetry 8.0.11 was not found. Npgsql.OpenTelemetry 9.0.0 was resolved instead.
+C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Observability.csproj : warning NU1603: Observability depends on Npgsql.OpenTelemetry (>= 8.0.11) but Npgsql.OpenTelemetry 8.0.11 was not found. Npgsql.OpenTelemetry 9.0.0 was resolved instead.
+C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Extensions\ObservabilityExtensions.cs(25,22): error CS1061: 'TracerProviderBuilder' does not contain a definition for 'AddNpgsql' and no accessible extension method 'AddNpgsql' accepting a first argument of type 'TracerProviderBuilder' could be found (are you missing a using directive or an assembly reference?) [C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Observability.csproj]
+    4 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:12.27
