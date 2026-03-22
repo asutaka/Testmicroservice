@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,11 @@
             --text: #f8fafc;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Outfit', sans-serif;
@@ -73,7 +78,11 @@
             background: rgba(255, 255, 255, 0.05);
         }
 
-        h2 { font-size: 1.2rem; margin-bottom: 15px; color: #cbd5e1; }
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #cbd5e1;
+        }
 
         button {
             width: 100%;
@@ -90,11 +99,24 @@
             gap: 10px;
         }
 
-        .btn-user { background: linear-gradient(135deg, #6366f1, #4f46e5); color: white; }
-        .btn-order { background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; }
-        
-        button:hover { filter: brightness(1.2); transform: scale(1.02); }
-        button:active { transform: scale(0.98); }
+        .btn-user {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+        }
+
+        .btn-order {
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+            color: white;
+        }
+
+        button:hover {
+            filter: brightness(1.2);
+            transform: scale(1.02);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
 
         .log-container {
             margin-top: 30px;
@@ -116,14 +138,28 @@
             gap: 10px;
         }
 
-        .time { color: #64748b; }
-        .method { font-weight: bold; }
-        .status-ok { color: #22c55e; }
-        .status-error { color: #ef4444; }
-        .msg { color: #e2e8f0; }
+        .time {
+            color: #64748b;
+        }
 
+        .method {
+            font-weight: bold;
+        }
+
+        .status-ok {
+            color: #22c55e;
+        }
+
+        .status-error {
+            color: #ef4444;
+        }
+
+        .msg {
+            color: #e2e8f0;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -136,14 +172,20 @@
                 <button class="btn-user" onclick="postRandomUser()">
                     <span>👤</span> Nạp 1 User Ngẫu Nhiên
                 </button>
-                <div style="margin-top: 10px; font-size: 0.8rem; color: #64748b;">Dữ liệu sẽ được đẩy vào /api/users</div>
+                <button id="bomb-btn" class="btn-bomb" onclick="startBombing()" style="margin-top: 10px;">
+                    <span>🚀</span> XẢ ĐẠN - TẠO 100 USERS
+                </button>
+                <div style="margin-top: 10px; font-size: 0.8rem; color: #64748b;">Dữ liệu sẽ được đẩy vào /api/users
+                </div>
             </div>
             <div class="card">
                 <h2>Order Processing</h2>
-                <button class="btn-order" onclick="postRandomOrder()" disabled style="opacity: 0.5; cursor: not-allowed;">
+                <button class="btn-order" onclick="postRandomOrder()" disabled
+                    style="opacity: 0.5; cursor: not-allowed;">
                     <span>🛒</span> (Sắp ra mắt)
                 </button>
-                <div style="margin-top: 10px; font-size: 0.8rem; color: #64748b;">Dữ liệu sẽ được đẩy vào /api/orders</div>
+                <div style="margin-top: 10px; font-size: 0.8rem; color: #64748b;">Dữ liệu sẽ được đẩy vào /api/orders
+                </div>
             </div>
         </div>
 
@@ -172,13 +214,13 @@
             logEl.prepend(entry);
         }
 
-        async function postRandomUser() {
+        async function postRandomUser(index = 0) {
             const firstNames = ['Anh', 'Binh', 'Chien', 'Dung', 'Giang', 'Hanh', 'Khoa', 'Linh'];
             const lastNames = ['Nguyen', 'Tran', 'Le', 'Pham', 'Hoang', 'Vu', 'Dang'];
-            
+
             const fName = firstNames[Math.floor(Math.random() * firstNames.length)];
             const lName = lastNames[Math.floor(Math.random() * lastNames.length)];
-            const randomEmail = `${fName.toLowerCase()}.${Date.now()}@test.com`;
+            const randomEmail = `${fName.toLowerCase()}.${Date.now()}.${index}.${Math.floor(Math.random() * 1000)}@test.com`;
 
             const payload = {
                 firstName: fName,
@@ -190,7 +232,7 @@
 
             try {
                 addLog('POST', `Đang gửi User: ${fName} ${lName}...`);
-                
+
                 const response = await fetch(API_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -208,6 +250,27 @@
                 addLog('POST', `Không kết nối được Gateway: ${err.message}`, 'error');
             }
         }
+
+        async function startBombing() {
+            const count = 100;
+            const btn = document.getElementById('bomb-btn');
+            btn.disabled = true;
+            btn.innerText = "💥 ĐANG OANH TẠC...";
+
+            addLog('BOMB', `Bắt đầu xả đạn: 100 yêu cầu/giây...`, 'ok');
+
+            const promises = [];
+            for (let i = 0; i < count; i++) {
+                promises.push(postRandomUser(i));
+            }
+
+            await Promise.all(promises);
+
+            btn.disabled = false;
+            btn.innerHTML = "<span>🚀</span> XẢ ĐẠN - TẠO 100 USERS";
+            addLog('BOMB', `Hoàn tất oanh tạc 100 Users!`, 'ok');
+        }
     </script>
 </body>
+
 </html>
