@@ -1,6 +1,7 @@
 using System.Threading.RateLimiting;
 using ApiGateway.Middleware;
 using Microsoft.AspNetCore.RateLimiting;
+using Observability.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +41,7 @@ builder.Services.AddAuthentication("Bearer")
 
 builder.Services.AddAuthorization();
 builder.Services.AddHealthChecks();
+builder.Services.AddObservability("ApiGateway");
 
 var app = builder.Build();
 
@@ -49,6 +51,7 @@ app.UseMiddleware<RequestLoggingMiddleware>();
 app.UseRateLimiter();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseObservability();
 app.MapReverseProxy();
 app.MapHealthChecks("/health");
 
