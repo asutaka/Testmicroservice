@@ -25,6 +25,15 @@ spec:
       containers:
         - name: api-gateway
           image: ghcr.io/asutaka/api-gateway:latest
+          envFrom:
+            - configMapRef:
+                name: microservices-config
+          env:
+            - name: JAEGER_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-config
+                  key: JAEGER_HOST
           ports:
             - containerPort: 5000
           resources: 
