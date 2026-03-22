@@ -1,0 +1,9 @@
+Unhandled exception. System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.Extensions.DependencyInjection.Abstractions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. The system cannot find the file specified.
+
+File name: 'Microsoft.Extensions.DependencyInjection.Abstractions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at Microsoft.Extensions.Hosting.HostBuilder.PopulateServiceCollection(IServiceCollection services, HostBuilderContext hostBuilderContext, HostingEnvironment hostingEnvironment, PhysicalFileProvider defaultFileProvider, IConfiguration appConfiguration, Func`1 serviceProviderGetter)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Initialize(HostApplicationBuilderSettings settings, HostBuilderContext& hostBuilderContext, IHostEnvironment& environment, LoggingBuilder& logging, MetricsBuilder& metrics)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder..ctor(HostApplicationBuilderSettings settings)
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at Program.<Main>$(String[] args) in /src/services/UserService/UserService.API/Program.cs:line 10

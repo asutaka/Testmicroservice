@@ -1,0 +1,13 @@
+Project 'Observability' has the following package references
+   [net8.0]: 
+   Top-level Package                                            Requested      Resolved     
+   > Microsoft.Extensions.DependencyInjection.Abstractions      8.0.2          8.0.2        
+   > OpenTelemetry                                              1.9.0          1.9.0        
+   > OpenTelemetry.Exporter.Jaeger                              1.5.1          1.5.1        
+   > OpenTelemetry.Exporter.Prometheus.AspNetCore               1.9.0-beta.2   1.9.0-beta.2 
+   > OpenTelemetry.Extensions.Hosting                           1.9.0          1.9.0        
+   > OpenTelemetry.Instrumentation.AspNetCore                   1.9.0          1.9.0        
+   > OpenTelemetry.Instrumentation.EntityFrameworkCore          1.9.0-beta.1   1.10.0-beta.1
+   > OpenTelemetry.Instrumentation.GrpcNetClient                1.9.0-beta.1   1.9.0-beta.1 
+   > OpenTelemetry.Instrumentation.Http                         1.9.0          1.9.0        
+

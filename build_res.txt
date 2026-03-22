@@ -1,0 +1,27 @@
+  Determining projects to restore...
+C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.API\UserService.API.csproj : warning NU1603: Observability depends on OpenTelemetry.Instrumentation.EntityFrameworkCore (>= 1.8.0-beta.1) but OpenTelemetry.Instrumentation.EntityFrameworkCore 1.8.0-beta.1 was not found. OpenTelemetry.Instrumentation.EntityFrameworkCore 1.10.0-beta.1 was resolved instead.
+C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Observability.csproj : warning NU1603: Observability depends on OpenTelemetry.Instrumentation.EntityFrameworkCore (>= 1.8.0-beta.1) but OpenTelemetry.Instrumentation.EntityFrameworkCore 1.8.0-beta.1 was not found. OpenTelemetry.Instrumentation.EntityFrameworkCore 1.10.0-beta.1 was resolved instead. [C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.API\UserService.API.csproj]
+  Restored C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Observability.csproj (in 5.27 sec).
+  Restored C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.API\UserService.API.csproj (in 5.27 sec).
+  6 of 8 projects are up-to-date for restore.
+C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.API\UserService.API.csproj : warning NU1603: Observability depends on OpenTelemetry.Instrumentation.EntityFrameworkCore (>= 1.8.0-beta.1) but OpenTelemetry.Instrumentation.EntityFrameworkCore 1.8.0-beta.1 was not found. OpenTelemetry.Instrumentation.EntityFrameworkCore 1.10.0-beta.1 was resolved instead.
+C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Observability.csproj : warning NU1603: Observability depends on OpenTelemetry.Instrumentation.EntityFrameworkCore (>= 1.8.0-beta.1) but OpenTelemetry.Instrumentation.EntityFrameworkCore 1.8.0-beta.1 was not found. OpenTelemetry.Instrumentation.EntityFrameworkCore 1.10.0-beta.1 was resolved instead.
+  EventBus -> C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\EventBus\bin\Debug\net8.0\EventBus.dll
+  SharedKernel -> C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\SharedKernel\bin\Debug\net8.0\SharedKernel.dll
+  Observability -> C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\bin\Debug\net8.0\Observability.dll
+  UserService.Domain -> C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.Domain\bin\Debug\net8.0\UserService.Domain.dll
+  UserService.Contracts -> C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.Contracts\bin\Debug\net8.0\UserService.Contracts.dll
+  UserService.Application -> C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.Application\bin\Debug\net8.0\UserService.Application.dll
+  UserService.Infrastructure -> C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.Infrastructure\bin\Debug\net8.0\UserService.Infrastructure.dll
+  UserService.API -> C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.API\bin\Debug\net8.0\UserService.API.dll
+
+Build succeeded.
+
+C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.API\UserService.API.csproj : warning NU1603: Observability depends on OpenTelemetry.Instrumentation.EntityFrameworkCore (>= 1.8.0-beta.1) but OpenTelemetry.Instrumentation.EntityFrameworkCore 1.8.0-beta.1 was not found. OpenTelemetry.Instrumentation.EntityFrameworkCore 1.10.0-beta.1 was resolved instead.
+C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Observability.csproj : warning NU1603: Observability depends on OpenTelemetry.Instrumentation.EntityFrameworkCore (>= 1.8.0-beta.1) but OpenTelemetry.Instrumentation.EntityFrameworkCore 1.8.0-beta.1 was not found. OpenTelemetry.Instrumentation.EntityFrameworkCore 1.10.0-beta.1 was resolved instead. [C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.API\UserService.API.csproj]
+C:\Users\asutaka\Desktop\TestMicroservice\services\UserService\UserService.API\UserService.API.csproj : warning NU1603: Observability depends on OpenTelemetry.Instrumentation.EntityFrameworkCore (>= 1.8.0-beta.1) but OpenTelemetry.Instrumentation.EntityFrameworkCore 1.8.0-beta.1 was not found. OpenTelemetry.Instrumentation.EntityFrameworkCore 1.10.0-beta.1 was resolved instead.
+C:\Users\asutaka\Desktop\TestMicroservice\building-blocks\Observability\Observability.csproj : warning NU1603: Observability depends on OpenTelemetry.Instrumentation.EntityFrameworkCore (>= 1.8.0-beta.1) but OpenTelemetry.Instrumentation.EntityFrameworkCore 1.8.0-beta.1 was not found. OpenTelemetry.Instrumentation.EntityFrameworkCore 1.10.0-beta.1 was resolved instead.
+    4 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:19.86

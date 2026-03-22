@@ -1,0 +1,37 @@
+NAMESPACE            NAME                                                READY   STATUS             RESTARTS         AGE
+argocd               argocd-application-controller-0                     1/1     Running            1 (21m ago)      22h
+argocd               argocd-applicationset-controller-56df666b4f-7j2ck   1/1     Running            2 (21m ago)      37h
+argocd               argocd-dex-server-7d5948f554-g42pc                  1/1     Running            2 (21m ago)      37h
+argocd               argocd-notifications-controller-7cd4dc4bf6-dr4km    1/1     Running            2 (21m ago)      37h
+argocd               argocd-redis-788dd7db77-plqh9                       1/1     Running            2 (21m ago)      37h
+argocd               argocd-repo-server-697946558-hss87                  0/1     Unknown            0                22h
+argocd               argocd-server-7f44fd8cd5-nftp2                      1/1     Running            3 (21m ago)      37h
+external-secrets     external-secrets-789664cb66-8dvgv                   1/1     Running            5 (20m ago)      3d13h
+external-secrets     external-secrets-cert-controller-699c499d-jsv4v     1/1     Running            6 (20m ago)      3d13h
+external-secrets     external-secrets-webhook-7bc87bf876-vzbbc           1/1     Running            3 (21m ago)      3d13h
+kube-system          coredns-7c65d6cfc9-fpf6m                            1/1     Running            3 (21m ago)      3d22h
+kube-system          coredns-7c65d6cfc9-mb6ft                            1/1     Running            3 (21m ago)      3d22h
+kube-system          etcd-desktop-control-plane                          1/1     Running            1 (21m ago)      25h
+kube-system          kindnet-kgtzm                                       1/1     Running            3 (21m ago)      3d22h
+kube-system          kube-apiserver-desktop-control-plane                1/1     Running            1 (21m ago)      25h
+kube-system          kube-controller-manager-desktop-control-plane       1/1     Running            4 (21m ago)      3d22h
+kube-system          kube-proxy-qmdds                                    1/1     Running            3 (21m ago)      3d22h
+kube-system          kube-scheduler-desktop-control-plane                1/1     Running            3 (21m ago)      3d22h
+local-path-storage   local-path-provisioner-57c5987fd4-xlzzp             1/1     Running            6 (20m ago)      3d22h
+microservices        api-gateway-74677c77cb-7sv24                        1/1     Running            1 (21m ago)      14h
+microservices        api-gateway-74677c77cb-nlnrw                        1/1     Running            1 (21m ago)      14h
+microservices        grafana-6dc8689468-q7lnz                            1/1     Running            1 (21m ago)      14h
+microservices        jaeger-857f7b5cb7-l67dt                             1/1     Running            1 (21m ago)      14h
+microservices        order-service-684b9c9947-pvv4p                      0/1     CrashLoopBackOff   17 (3m48s ago)   14h
+microservices        order-service-6bd4d695f4-n5hds                      0/1     CrashLoopBackOff   8 (3m45s ago)    14h
+microservices        order-service-6bd4d695f4-w7ljc                      0/1     CrashLoopBackOff   8 (4m2s ago)     14h
+microservices        payment-service-7b86bfd848-s24jz                    0/1     CrashLoopBackOff   8 (4m7s ago)     14h
+microservices        postgres-postgresql-0                               1/1     Running            2 (21m ago)      36h
+microservices        prometheus-558f9b985b-92zb2                         1/1     Running            1 (21m ago)      14h
+microservices        rabbitmq-6979486b9b-lz524                           1/1     Running            1 (21m ago)      20h
+microservices        user-service-768475ff6b-n5zkn                       0/1     CrashLoopBackOff   17 (3m57s ago)   14h
+microservices        user-service-7cc45dc46f-krx2t                       0/1     CrashLoopBackOff   8 (4m13s ago)    14h
+microservices        user-service-7cc45dc46f-vbnm9                       0/1     CrashLoopBackOff   8 (3m54s ago)    14h
+microservices        web-bff-59fd64f4db-pnh5r                            1/1     Running            1 (21m ago)      14h
+vault                vault-0                                             1/1     Running            3 (21m ago)      3d13h
+vault                vault-agent-injector-5db7599855-bjlct               1/1     Running            3 (21m ago)      3d13h
