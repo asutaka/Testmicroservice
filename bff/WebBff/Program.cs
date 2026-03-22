@@ -1,4 +1,5 @@
 using Microsoft.OpenApi.Models;
+using Observability.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,7 @@ builder.Services.AddHttpClient("OrderService", client =>
 });
 
 builder.Services.AddHealthChecks();
+builder.Services.AddObservability("WebBff");
 
 var app = builder.Build();
 
@@ -34,4 +36,5 @@ if (app.Environment.IsDevelopment())
 
 app.MapControllers();
 app.MapHealthChecks("/health");
+app.UseObservability();
 app.Run();

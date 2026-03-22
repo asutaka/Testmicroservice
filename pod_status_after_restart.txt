@@ -1,0 +1,35 @@
+NAMESPACE            NAME                                                READY   STATUS    RESTARTS        AGE
+argocd               argocd-application-controller-0                     1/1     Running   2 (2m24s ago)   31h
+argocd               argocd-applicationset-controller-66d7879d9b-qg6nl   1/1     Running   1 (2m25s ago)   5h17m
+argocd               argocd-dex-server-6d4658456f-89vsm                  1/1     Running   1 (2m25s ago)   5h17m
+argocd               argocd-notifications-controller-7b6cb74f85-g87n2    1/1     Running   1 (2m24s ago)   5h17m
+argocd               argocd-redis-69d9bc7988-8pf9q                       1/1     Running   1 (2m24s ago)   5h17m
+argocd               argocd-repo-server-8f8dfd779-9qmpk                  0/1     Unknown   0               5h17m
+argocd               argocd-server-75d7cbd698-c9pvq                      1/1     Running   1 (2m24s ago)   5h17m
+external-secrets     external-secrets-789664cb66-8dvgv                   1/1     Running   6 (2m24s ago)   3d22h
+external-secrets     external-secrets-cert-controller-699c499d-jsv4v     1/1     Running   7 (2m25s ago)   3d22h
+external-secrets     external-secrets-webhook-7bc87bf876-vzbbc           1/1     Running   4 (2m25s ago)   3d22h
+kube-system          coredns-7c65d6cfc9-fpf6m                            1/1     Running   4 (2m25s ago)   4d7h
+kube-system          coredns-7c65d6cfc9-mb6ft                            1/1     Running   4 (2m25s ago)   4d7h
+kube-system          etcd-desktop-control-plane                          1/1     Running   0               116s
+kube-system          kindnet-kgtzm                                       1/1     Running   4 (2m24s ago)   4d7h
+kube-system          kube-apiserver-desktop-control-plane                1/1     Running   0               117s
+kube-system          kube-controller-manager-desktop-control-plane       1/1     Running   5 (2m25s ago)   4d7h
+kube-system          kube-proxy-qmdds                                    1/1     Running   4 (2m25s ago)   4d7h
+kube-system          kube-scheduler-desktop-control-plane                1/1     Running   4 (2m24s ago)   4d7h
+local-path-storage   local-path-provisioner-57c5987fd4-xlzzp             1/1     Running   8 (102s ago)    4d7h
+microservices        api-gateway-77ddb68859-f2ppq                        1/1     Running   2 (98s ago)     76m
+microservices        api-gateway-77ddb68859-xm9sl                        1/1     Running   2 (101s ago)    76m
+microservices        grafana-6dc8689468-q7lnz                            1/1     Running   2 (2m24s ago)   24h
+microservices        jaeger-857f7b5cb7-l67dt                             1/1     Running   2 (2m25s ago)   24h
+microservices        order-service-7f799fd76b-dtsnv                      1/1     Running   2 (112s ago)    6h20m
+microservices        order-service-7f799fd76b-gtxh5                      1/1     Running   2 (108s ago)    6h19m
+microservices        payment-service-7b86bfd848-s24jz                    1/1     Running   34 (2m1s ago)   23h
+microservices        postgres-postgresql-0                               1/1     Running   3 (2m25s ago)   45h
+microservices        prometheus-8646495bcd-q67fx                         1/1     Running   1 (2m25s ago)   23m
+microservices        rabbitmq-6979486b9b-lz524                           1/1     Running   2 (2m25s ago)   29h
+microservices        user-service-668f56d7f8-hjwjx                       1/1     Running   2 (116s ago)    6h13m
+microservices        user-service-668f56d7f8-x67d9                       1/1     Running   2 (110s ago)    6h14m
+microservices        web-bff-59fd64f4db-pnh5r                            1/1     Running   2 (2m25s ago)   24h
+vault                vault-0                                             1/1     Running   4 (2m24s ago)   3d22h
+vault                vault-agent-injector-5db7599855-bjlct               1/1     Running   4 (2m25s ago)   3d22h
